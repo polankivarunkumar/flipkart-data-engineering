@@ -75,3 +75,178 @@
 2026-11-21 20:03:37,190 - OrderGeneration - INFO - Generated 998 records: order_items.json
 2026-11-21 20:03:37,207 - OrderGeneration - INFO - Generated 500 records: payments.json
 2026-11-21 20:03:37,208 - OrderGeneration - INFO - Order generation completed successfully
+2026-11-21 20:15:52,826 - DataValidation - INFO - Data validation started
+2026-11-21 20:15:52,865 - DataValidation - INFO - Products: No duplicate IDs
+2026-11-21 20:15:52,866 - DataValidation - INFO - Products: No null/empty values
+2026-11-21 20:15:52,867 - DataValidation - INFO - Customers: No duplicate IDs
+2026-11-21 20:15:52,869 - DataValidation - ERROR - Customers: 148 records contain null/empty values
+2026-11-21 20:15:52,869 - DataValidation - INFO - Orders: No duplicate IDs
+2026-11-21 20:15:52,878 - DataValidation - INFO - Payments: No duplicate IDs
+2026-11-21 20:15:52,879 - DataValidation - INFO - VALIDATION SUMMARY
+2026-11-21 20:15:52,881 - DataValidation - INFO - products: PASSED
+2026-11-21 20:15:52,884 - DataValidation - INFO - customers: FAILED
+2026-11-21 20:15:52,887 - DataValidation - INFO - orders: PASSED
+2026-11-21 20:15:52,887 - DataValidation - INFO - order_items: PASSED
+2026-11-21 20:15:52,889 - DataValidation - INFO - payments: PASSED
+2026-11-21 20:15:52,890 - DataValidation - ERROR - Data validation pipeline failed
+Traceback (most recent call last):
+  File "/Users/varunkumar/Desktop/Data_ENGINEERING_PROJECT/flipkart-data-engineering/src/validation/validate_data.py", line 313, in <module>
+    validate_all_datasets()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/varunkumar/Desktop/Data_ENGINEERING_PROJECT/flipkart-data-engineering/src/validation/validate_data.py", line 298, in validate_all_datasets
+    raise ValueError(
+        "Data quality validation failed"
+    )
+ValueError: Data quality validation failed
+2026-11-21 20:17:41,434 - DataValidation - INFO - ==================================================
+2026-11-21 20:17:41,436 - DataValidation - INFO - DATA QUALITY VALIDATION STARTED
+2026-11-21 20:17:41,436 - DataValidation - INFO - ==================================================
+2026-11-21 20:17:41,450 - DataValidation - INFO - Loaded 194 records from products.json
+2026-11-21 20:17:41,467 - DataValidation - INFO - Loaded 208 records from customers.json
+2026-11-21 20:17:41,472 - DataValidation - INFO - Loaded 500 records from orders.json
+2026-11-21 20:17:41,478 - DataValidation - INFO - Loaded 998 records from order_items.json
+2026-11-21 20:17:41,483 - DataValidation - INFO - Loaded 500 records from payments.json
+2026-11-21 20:17:41,484 - DataValidation - INFO - Validating products
+2026-11-21 20:17:41,485 - DataValidation - INFO - Products: Duplicate check PASSED
+2026-11-21 20:17:41,486 - DataValidation - INFO - Products: Null check PASSED
+2026-11-21 20:17:41,486 - DataValidation - INFO - Validating customers
+2026-11-21 20:17:41,487 - DataValidation - INFO - Customers: Duplicate check PASSED
+2026-11-21 20:17:41,488 - DataValidation - ERROR - Customers: Record 1: maidenName is missing
+2026-11-21 20:17:41,489 - DataValidation - ERROR - Customers: Record 2: maidenName is missing
+2026-11-21 20:17:41,489 - DataValidation - ERROR - Customers: Record 3: maidenName is missing
+2026-11-21 20:17:41,490 - DataValidation - ERROR - Customers: Record 5: maidenName is missing
+2026-11-21 20:17:41,491 - DataValidation - ERROR - Customers: Record 6: maidenName is missing
+2026-11-21 20:17:41,492 - DataValidation - ERROR - Customers: Record 7: maidenName is missing
+2026-11-21 20:17:41,493 - DataValidation - ERROR - Customers: Record 8: maidenName is missing
+2026-11-21 20:17:41,493 - DataValidation - ERROR - Customers: Record 10: maidenName is missing
+2026-11-21 20:17:41,493 - DataValidation - ERROR - Customers: Record 11: maidenName is missing
+2026-11-21 20:17:41,493 - DataValidation - ERROR - Customers: Record 12: maidenName is missing
+2026-11-21 20:17:41,493 - DataValidation - ERROR - Customers: Record 14: maidenName is missing
+2026-11-21 20:17:41,494 - DataValidation - ERROR - Customers: Record 15: maidenName is missing
+2026-11-21 20:17:41,494 - DataValidation - ERROR - Customers: Record 16: maidenName is missing
+2026-11-21 20:17:41,495 - DataValidation - ERROR - Customers: Record 17: maidenName is missing
+2026-11-21 20:17:41,497 - DataValidation - ERROR - Customers: Record 18: maidenName is missing
+2026-11-21 20:17:41,497 - DataValidation - ERROR - Customers: Record 19: maidenName is missing
+2026-11-21 20:17:41,498 - DataValidation - ERROR - Customers: Record 20: maidenName is missing
+2026-11-21 20:17:41,498 - DataValidation - ERROR - Customers: Record 21: maidenName is missing
+2026-11-21 20:17:41,498 - DataValidation - ERROR - Customers: Record 22: maidenName is missing
+2026-11-21 20:17:41,499 - DataValidation - ERROR - Customers: Record 23: maidenName is missing
+2026-11-21 20:17:41,499 - DataValidation - INFO - Validating orders
+2026-11-21 20:17:41,500 - DataValidation - INFO - Orders: Duplicate check PASSED
+2026-11-21 20:17:41,501 - DataValidation - INFO - Orders: Null check PASSED
+2026-11-21 20:17:41,501 - DataValidation - INFO - Validating order items
+2026-11-21 20:17:41,503 - DataValidation - INFO - Validating payments
+2026-11-21 20:17:41,504 - DataValidation - INFO - Payments: Duplicate check PASSED
+2026-11-21 20:17:41,505 - DataValidation - INFO - ==================================================
+2026-11-21 20:17:41,506 - DataValidation - INFO - DATA QUALITY VALIDATION SUMMARY
+2026-11-21 20:17:41,507 - DataValidation - INFO - ==================================================
+2026-11-21 20:17:41,507 - DataValidation - INFO - Products: PASSED
+2026-11-21 20:17:41,507 - DataValidation - INFO - Customers: FAILED
+2026-11-21 20:17:41,507 - DataValidation - INFO - Orders: PASSED
+2026-11-21 20:17:41,508 - DataValidation - INFO - Order Items: PASSED
+2026-11-21 20:17:41,508 - DataValidation - INFO - Payments: PASSED
+2026-11-21 20:17:41,508 - DataValidation - INFO - Total datasets: 5
+2026-11-21 20:17:41,509 - DataValidation - INFO - Passed: 4
+2026-11-21 20:17:41,509 - DataValidation - INFO - Failed: 1
+2026-11-21 20:17:41,509 - DataValidation - ERROR - Failed datasets: ['Customers']
+2026-11-21 20:17:41,510 - DataValidation - ERROR - Data validation pipeline failed
+Traceback (most recent call last):
+  File "/Users/varunkumar/Desktop/Data_ENGINEERING_PROJECT/flipkart-data-engineering/src/validation/validate_data.py", line 474, in <module>
+    validate_all_datasets()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/varunkumar/Desktop/Data_ENGINEERING_PROJECT/flipkart-data-engineering/src/validation/validate_data.py", line 459, in validate_all_datasets
+    raise ValueError(
+        "Data quality validation failed"
+    )
+ValueError: Data quality validation failed
+2026-11-21 20:17:54,593 - DataValidation - INFO - ==================================================
+2026-11-21 20:17:54,594 - DataValidation - INFO - DATA QUALITY VALIDATION STARTED
+2026-11-21 20:17:54,595 - DataValidation - INFO - ==================================================
+2026-11-21 20:17:54,640 - DataValidation - INFO - Loaded 194 records from products.json
+2026-11-21 20:17:54,663 - DataValidation - INFO - Loaded 208 records from customers.json
+2026-11-21 20:17:54,667 - DataValidation - INFO - Loaded 500 records from orders.json
+2026-11-21 20:17:54,677 - DataValidation - INFO - Loaded 998 records from order_items.json
+2026-11-21 20:17:54,688 - DataValidation - INFO - Loaded 500 records from payments.json
+2026-11-21 20:17:54,689 - DataValidation - INFO - Validating products
+2026-11-21 20:17:54,689 - DataValidation - INFO - Products: Duplicate check PASSED
+2026-11-21 20:17:54,690 - DataValidation - INFO - Products: Null check PASSED
+2026-11-21 20:17:54,690 - DataValidation - INFO - Validating customers
+2026-11-21 20:17:54,690 - DataValidation - INFO - Customers: Duplicate check PASSED
+2026-11-21 20:17:54,695 - DataValidation - ERROR - Customers: Record 1: maidenName is missing
+2026-11-21 20:17:54,695 - DataValidation - ERROR - Customers: Record 2: maidenName is missing
+2026-11-21 20:17:54,695 - DataValidation - ERROR - Customers: Record 3: maidenName is missing
+2026-11-21 20:17:54,695 - DataValidation - ERROR - Customers: Record 5: maidenName is missing
+2026-11-21 20:17:54,696 - DataValidation - ERROR - Customers: Record 6: maidenName is missing
+2026-11-21 20:17:54,696 - DataValidation - ERROR - Customers: Record 7: maidenName is missing
+2026-11-21 20:17:54,696 - DataValidation - ERROR - Customers: Record 8: maidenName is missing
+2026-11-21 20:17:54,696 - DataValidation - ERROR - Customers: Record 10: maidenName is missing
+2026-11-21 20:17:54,696 - DataValidation - ERROR - Customers: Record 11: maidenName is missing
+2026-11-21 20:17:54,696 - DataValidation - ERROR - Customers: Record 12: maidenName is missing
+2026-11-21 20:17:54,696 - DataValidation - ERROR - Customers: Record 14: maidenName is missing
+2026-11-21 20:17:54,704 - DataValidation - ERROR - Customers: Record 15: maidenName is missing
+2026-11-21 20:17:54,704 - DataValidation - ERROR - Customers: Record 16: maidenName is missing
+2026-11-21 20:17:54,705 - DataValidation - ERROR - Customers: Record 17: maidenName is missing
+2026-11-21 20:17:54,705 - DataValidation - ERROR - Customers: Record 18: maidenName is missing
+2026-11-21 20:17:54,706 - DataValidation - ERROR - Customers: Record 19: maidenName is missing
+2026-11-21 20:17:54,706 - DataValidation - ERROR - Customers: Record 20: maidenName is missing
+2026-11-21 20:17:54,706 - DataValidation - ERROR - Customers: Record 21: maidenName is missing
+2026-11-21 20:17:54,706 - DataValidation - ERROR - Customers: Record 22: maidenName is missing
+2026-11-21 20:17:54,706 - DataValidation - ERROR - Customers: Record 23: maidenName is missing
+2026-11-21 20:17:54,706 - DataValidation - INFO - Validating orders
+2026-11-21 20:17:54,706 - DataValidation - INFO - Orders: Duplicate check PASSED
+2026-11-21 20:17:54,707 - DataValidation - INFO - Orders: Null check PASSED
+2026-11-21 20:17:54,707 - DataValidation - INFO - Validating order items
+2026-11-21 20:17:54,707 - DataValidation - INFO - Validating payments
+2026-11-21 20:17:54,708 - DataValidation - INFO - Payments: Duplicate check PASSED
+2026-11-21 20:17:54,708 - DataValidation - INFO - ==================================================
+2026-11-21 20:17:54,708 - DataValidation - INFO - DATA QUALITY VALIDATION SUMMARY
+2026-11-21 20:17:54,708 - DataValidation - INFO - ==================================================
+2026-11-21 20:17:54,709 - DataValidation - INFO - Products: PASSED
+2026-11-21 20:17:54,709 - DataValidation - INFO - Customers: FAILED
+2026-11-21 20:17:54,709 - DataValidation - INFO - Orders: PASSED
+2026-11-21 20:17:54,709 - DataValidation - INFO - Order Items: PASSED
+2026-11-21 20:17:54,709 - DataValidation - INFO - Payments: PASSED
+2026-11-21 20:17:54,709 - DataValidation - INFO - Total datasets: 5
+2026-11-21 20:17:54,709 - DataValidation - INFO - Passed: 4
+2026-11-21 20:17:54,710 - DataValidation - INFO - Failed: 1
+2026-11-21 20:17:54,710 - DataValidation - ERROR - Failed datasets: ['Customers']
+2026-11-21 20:17:54,710 - DataValidation - ERROR - Data validation pipeline failed
+Traceback (most recent call last):
+  File "/Users/varunkumar/Desktop/Data_ENGINEERING_PROJECT/flipkart-data-engineering/src/validation/validate_data.py", line 474, in <module>
+    validate_all_datasets()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/varunkumar/Desktop/Data_ENGINEERING_PROJECT/flipkart-data-engineering/src/validation/validate_data.py", line 459, in validate_all_datasets
+    raise ValueError(
+        "Data quality validation failed"
+    )
+ValueError: Data quality validation failed
+2026-11-21 20:20:25,255 - DataValidation - INFO - ==================================================
+2026-11-21 20:20:25,270 - DataValidation - INFO - DATA QUALITY VALIDATION STARTED
+2026-11-21 20:20:25,273 - DataValidation - INFO - ==================================================
+2026-11-21 20:20:25,337 - DataValidation - INFO - Loaded 194 records from products.json
+2026-11-21 20:20:25,360 - DataValidation - INFO - Loaded 208 records from customers.json
+2026-11-21 20:20:25,363 - DataValidation - INFO - Loaded 500 records from orders.json
+2026-11-21 20:20:25,374 - DataValidation - INFO - Loaded 998 records from order_items.json
+2026-11-21 20:20:25,444 - DataValidation - INFO - Loaded 500 records from payments.json
+2026-11-21 20:20:25,445 - DataValidation - INFO - Validating products
+2026-11-21 20:20:25,449 - DataValidation - INFO - Products: Duplicate check PASSED
+2026-11-21 20:20:25,451 - DataValidation - INFO - Validating customers
+2026-11-21 20:20:25,451 - DataValidation - INFO - Customers: Duplicate check PASSED
+2026-11-21 20:20:25,452 - DataValidation - INFO - Customer validation PASSED
+2026-11-21 20:20:25,453 - DataValidation - INFO - Validating orders
+2026-11-21 20:20:25,454 - DataValidation - INFO - Orders: Duplicate check PASSED
+2026-11-21 20:20:25,455 - DataValidation - INFO - Validating order items
+2026-11-21 20:20:25,459 - DataValidation - INFO - Validating payments
+2026-11-21 20:20:25,460 - DataValidation - INFO - Payments: Duplicate check PASSED
+2026-11-21 20:20:25,462 - DataValidation - INFO - ==================================================
+2026-11-21 20:20:25,462 - DataValidation - INFO - DATA QUALITY VALIDATION SUMMARY
+2026-11-21 20:20:25,462 - DataValidation - INFO - ==================================================
+2026-11-21 20:20:25,462 - DataValidation - INFO - Products: PASSED
+2026-11-21 20:20:25,462 - DataValidation - INFO - Customers: PASSED
+2026-11-21 20:20:25,462 - DataValidation - INFO - Orders: PASSED
+2026-11-21 20:20:25,462 - DataValidation - INFO - Order Items: PASSED
+2026-11-21 20:20:25,462 - DataValidation - INFO - Payments: PASSED
+2026-11-21 20:20:25,462 - DataValidation - INFO - Total datasets: 5
+2026-11-21 20:20:25,463 - DataValidation - INFO - Passed: 5
+2026-11-21 20:20:25,464 - DataValidation - INFO - Failed: 0
+2026-11-21 20:20:25,464 - DataValidation - INFO - ALL DATASETS PASSED VALIDATION
