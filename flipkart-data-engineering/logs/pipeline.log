@@ -70,3 +70,8 @@
 2026-11-21 20:00:40,651 - CustomerExtraction - INFO - Customer extraction completed
 2026-11-21 20:00:40,651 - CustomerExtraction - INFO - Total customers: 208
 2026-11-21 20:00:40,651 - CustomerExtraction - INFO - Output file: /Users/varunkumar/Desktop/Data_ENGINEERING_PROJECT/flipkart-data-engineering/data/raw/customers.json
+2026-11-21 20:03:37,106 - OrderGeneration - INFO - Order generation started
+2026-11-21 20:03:37,158 - OrderGeneration - INFO - Generated 500 records: orders.json
+2026-11-21 20:03:37,190 - OrderGeneration - INFO - Generated 998 records: order_items.json
+2026-11-21 20:03:37,207 - OrderGeneration - INFO - Generated 500 records: payments.json
+2026-11-21 20:03:37,208 - OrderGeneration - INFO - Order generation completed successfully
