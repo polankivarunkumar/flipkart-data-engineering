@@ -1,0 +1,54 @@
+2026-11-21 19:56:30,593 - ProductExtraction - INFO - Product extraction started
+2026-11-21 19:56:30,593 - ProductExtraction - INFO - API request attempt: 1
+2026-11-21 19:56:31,272 - ProductExtraction - INFO - Fetched 30 products. Total collected: 30 / 194
+2026-11-21 19:56:31,272 - ProductExtraction - INFO - API request attempt: 1
+2026-11-21 19:56:31,835 - ProductExtraction - INFO - Fetched 30 products. Total collected: 60 / 194
+2026-11-21 19:56:31,835 - ProductExtraction - INFO - API request attempt: 1
+2026-11-21 19:56:32,430 - ProductExtraction - INFO - Fetched 30 products. Total collected: 90 / 194
+2026-11-21 19:56:32,430 - ProductExtraction - INFO - API request attempt: 1
+2026-11-21 19:56:33,353 - ProductExtraction - INFO - Fetched 30 products. Total collected: 120 / 194
+2026-11-21 19:56:33,353 - ProductExtraction - INFO - API request attempt: 1
+2026-11-21 19:56:33,852 - ProductExtraction - INFO - Fetched 30 products. Total collected: 150 / 194
+2026-11-21 19:56:33,853 - ProductExtraction - INFO - API request attempt: 1
+2026-11-21 19:56:34,498 - ProductExtraction - INFO - Fetched 30 products. Total collected: 180 / 194
+2026-11-21 19:56:34,499 - ProductExtraction - INFO - API request attempt: 1
+2026-11-21 19:56:35,035 - ProductExtraction - INFO - Fetched 14 products. Total collected: 194 / 194
+2026-11-21 19:56:35,077 - ProductExtraction - INFO - Product extraction completed
+2026-11-21 19:56:35,077 - ProductExtraction - INFO - Total products extracted: 194
+2026-11-21 19:56:35,078 - ProductExtraction - INFO - Output file: /Users/varunkumar/Desktop/Data_ENGINEERING_PROJECT/flipkart-data-engineering/data/raw/products.json
+2026-11-21 19:57:07,087 - ProductExtraction - INFO - Product extraction started
+2026-11-21 19:57:07,089 - ProductExtraction - INFO - API request attempt: 1
+2026-11-21 19:57:07,644 - ProductExtraction - INFO - Fetched 30 products. Total collected: 30 / 194
+2026-11-21 19:57:07,644 - ProductExtraction - INFO - API request attempt: 1
+2026-11-21 19:57:08,352 - ProductExtraction - INFO - Fetched 30 products. Total collected: 60 / 194
+2026-11-21 19:57:08,352 - ProductExtraction - INFO - API request attempt: 1
+2026-11-21 19:57:09,002 - ProductExtraction - INFO - Fetched 30 products. Total collected: 90 / 194
+2026-11-21 19:57:09,002 - ProductExtraction - INFO - API request attempt: 1
+2026-11-21 19:57:09,497 - ProductExtraction - INFO - Fetched 30 products. Total collected: 120 / 194
+2026-11-21 19:57:09,497 - ProductExtraction - INFO - API request attempt: 1
+2026-11-21 19:57:09,989 - ProductExtraction - INFO - Fetched 30 products. Total collected: 150 / 194
+2026-11-21 19:57:09,989 - ProductExtraction - INFO - API request attempt: 1
+2026-11-21 19:57:11,117 - ProductExtraction - INFO - Fetched 30 products. Total collected: 180 / 194
+2026-11-21 19:57:11,117 - ProductExtraction - INFO - API request attempt: 1
+2026-11-21 19:57:11,632 - ProductExtraction - INFO - Fetched 14 products. Total collected: 194 / 194
+2026-11-21 19:57:11,663 - ProductExtraction - INFO - Product extraction completed
+2026-11-21 19:57:11,664 - ProductExtraction - INFO - Total products extracted: 194
+2026-11-21 19:57:11,664 - ProductExtraction - INFO - Output file: /Users/varunkumar/Desktop/Data_ENGINEERING_PROJECT/flipkart-data-engineering/data/raw/products.json
+2026-11-21 19:58:28,360 - CustomerExtraction - INFO - Customer extraction started
+2026-11-21 19:58:28,362 - CustomerExtraction - INFO - API request attempt: 1
+2026-11-21 19:58:28,903 - CustomerExtraction - INFO - Fetched 30 customers. Total: 30 / 208
+2026-11-21 19:58:28,903 - CustomerExtraction - INFO - API request attempt: 1
+2026-11-21 19:58:29,400 - CustomerExtraction - INFO - Fetched 30 customers. Total: 60 / 208
+2026-11-21 19:58:29,400 - CustomerExtraction - INFO - API request attempt: 1
+2026-11-21 19:58:29,963 - CustomerExtraction - INFO - Fetched 30 customers. Total: 90 / 208
+2026-11-21 19:58:29,964 - CustomerExtraction - INFO - API request attempt: 1
+2026-11-21 19:58:30,563 - CustomerExtraction - INFO - Fetched 30 customers. Total: 120 / 208
+2026-11-21 19:58:30,564 - CustomerExtraction - INFO - API request attempt: 1
+2026-11-21 19:58:31,064 - CustomerExtraction - INFO - Fetched 30 customers. Total: 150 / 208
+2026-11-21 19:58:31,065 - CustomerExtraction - INFO - API request attempt: 1
+2026-11-21 19:58:31,561 - CustomerExtraction - INFO - Fetched 30 customers. Total: 180 / 208
+2026-11-21 19:58:31,561 - CustomerExtraction - INFO - API request attempt: 1
+2026-11-21 19:58:32,072 - CustomerExtraction - INFO - Fetched 28 customers. Total: 208 / 208
+2026-11-21 19:58:32,103 - CustomerExtraction - INFO - Customer extraction completed
+2026-11-21 19:58:32,104 - CustomerExtraction - INFO - Total customers: 208
+2026-11-21 19:58:32,104 - CustomerExtraction - INFO - Output file: /Users/varunkumar/Desktop/Data_ENGINEERING_PROJECT/flipkart-data-engineering/data/raw/customers.json

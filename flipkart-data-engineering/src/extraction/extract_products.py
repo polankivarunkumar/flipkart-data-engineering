@@ -4,21 +4,37 @@ import json
 import time
 from pathlib import Path
 
+from src.utils.logger import get_logger
+
+
+# --------------------------------------------------
+# CONFIGURATION
+# --------------------------------------------------
+
 BASE_URL = "https://dummyjson.com/products"
 
 BASE_DIR = Path(__file__).resolve().parents[2]
+
 OUTPUT_FILE = BASE_DIR / "data" / "raw" / "products.json"
 
 BATCH_SIZE = 30
+
 MAX_RETRIES = 3
 
+logger = get_logger("ProductExtraction")
+
+
+# --------------------------------------------------
+# API REQUEST WITH RETRY
+# --------------------------------------------------
 
 def fetch_with_retry(url, params):
 
     for attempt in range(1, MAX_RETRIES + 1):
 
         try:
-            print(f"API request attempt: {attempt}")
+
+            logger.info(f"API request attempt: {attempt}")
 
             response = requests.get(
                 url,
@@ -26,17 +42,13 @@ def fetch_with_retry(url, params):
                 timeout=30
             )
 
-            # Retry temporary server errors and rate limits
-            if response.status_code == 429 or response.status_code >= 500:
-                response.raise_for_status()
-
             response.raise_for_status()
 
             return response.json()
 
-        except (requests.Timeout, requests.ConnectionError) as error:
+        except (requests.Timeout, requests.ConnectionError):
 
-            print(f"Network error: {error}")
+            logger.exception("Network error occurred")
 
         except requests.HTTPError as error:
 
@@ -45,24 +57,38 @@ def fetch_with_retry(url, params):
             if status != 429 and status < 500:
                 raise
 
-            print(f"Temporary API error: {status}")
+            logger.warning(
+                f"Temporary API error: HTTP {status}"
+            )
 
         if attempt < MAX_RETRIES:
+
             wait_time = 2 ** attempt
 
-            print(f"Retrying in {wait_time} seconds...")
+            logger.info(
+                f"Retrying after {wait_time} seconds"
+            )
+
             time.sleep(wait_time)
 
-    raise Exception("API extraction failed after maximum retries")
+    raise Exception(
+        "API request failed after maximum retries"
+    )
 
+
+# --------------------------------------------------
+# PRODUCT DATA EXTRACTION
+# --------------------------------------------------
 
 def extract_products():
 
     all_products = []
+
     skip = 0
+
     total = None
 
-    print("Starting product extraction...")
+    logger.info("Product extraction started")
 
     while total is None or skip < total:
 
@@ -71,31 +97,72 @@ def extract_products():
             "skip": skip
         }
 
-        data = fetch_with_retry(BASE_URL, params)
+        data = fetch_with_retry(
+            BASE_URL,
+            params
+        )
 
         products = data["products"]
+
         total = data["total"]
 
         if not products:
+
+            logger.warning("No more products available")
+
             break
 
         all_products.extend(products)
 
-        print(
-            f"Fetched {len(products)} records. "
-            f"Total: {len(all_products)} / {total}"
+        logger.info(
+            f"Fetched {len(products)} products. "
+            f"Total collected: {len(all_products)} / {total}"
         )
 
         skip += len(products)
 
-    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    # --------------------------------------------------
+    # SAVE DATA
+    # --------------------------------------------------
+
+    OUTPUT_FILE.parent.mkdir(
+        parents=True,
+        exist_ok=True
+    )
 
     with open(OUTPUT_FILE, "w") as file:
-        json.dump(all_products, file, indent=4)
 
-    print("Extraction completed!")
-    print("Total products:", len(all_products))
+        json.dump(
+            all_products,
+            file,
+            indent=4
+        )
 
+    logger.info("Product extraction completed")
+
+    logger.info(
+        f"Total products extracted: {len(all_products)}"
+    )
+
+    logger.info(
+        f"Output file: {OUTPUT_FILE}"
+    )
+
+
+# --------------------------------------------------
+# MAIN EXECUTION
+# --------------------------------------------------
 
 if __name__ == "__main__":
-    extract_products()
+
+    try:
+
+        extract_products()
+
+    except Exception:
+
+        logger.exception(
+            "Product extraction pipeline failed"
+        )
+
+        raise
